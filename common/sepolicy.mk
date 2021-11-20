@@ -10,26 +10,26 @@ endif
 endif
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/halcyon/sepolicy/common/public
+    device/gengkapak/sepolicy/common/public
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/halcyon/sepolicy/common/private
+    device/gengkapak/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/halcyon/sepolicy/common/dynamic \
-    device/halcyon/sepolicy/common/system
+    device/gengkapak/sepolicy/common/dynamic \
+    device/gengkapak/sepolicy/common/system
 
 ifneq ($(TARGET_HAL_POWER_RW_INPUT_DEVICE), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/halcyon/sepolicy/common/dynamic_extra
+    device/gengkapak/sepolicy/common/dynamic_extra
 endif
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/halcyon/sepolicy/common/dynamic \
-    device/halcyon/sepolicy/common/dynamic_extra \
-    device/halcyon/sepolicy/common/vendor
+    device/gengkapak/sepolicy/common/dynamic \
+    device/gengkapak/sepolicy/common/dynamic_extra \
+    device/gengkapak/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/halcyon/sepolicy/legacy-common/sepolicy.mk
+-include device/gengkapak/sepolicy/legacy-common/sepolicy.mk
